@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/view/test_page.dart';
 
 class HomeScreen extends StatelessWidget //extends GetView<HomeController> {
 {
@@ -20,7 +19,7 @@ class HomeScreen extends StatelessWidget //extends GetView<HomeController> {
           children: [
             MaterialButton(
                 onPressed: () {
-                  Get.to(const TestPage());
+                  Get.toNamed('/testScreen');
                 },
                 child: const Text('test page')),
             const Text(
