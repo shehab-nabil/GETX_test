@@ -1,0 +1,10 @@
+C:/Users/nsheh/StudioProjects/getx/build/windows/CMakeFiles/INSTALL.dir
+C:/Users/nsheh/StudioProjects/getx/build/windows/CMakeFiles/ALL_BUILD.dir
+C:/Users/nsheh/StudioProjects/getx/build/windows/CMakeFiles/ZERO_CHECK.dir
+C:/Users/nsheh/StudioProjects/getx/build/windows/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+C:/Users/nsheh/StudioProjects/getx/build/windows/flutter/CMakeFiles/flutter_wrapper_app.dir
+C:/Users/nsheh/StudioProjects/getx/build/windows/flutter/CMakeFiles/flutter_assemble.dir
+C:/Users/nsheh/StudioProjects/getx/build/windows/flutter/CMakeFiles/INSTALL.dir
+C:/Users/nsheh/StudioProjects/getx/build/windows/runner/CMakeFiles/getx.dir
+C:/Users/nsheh/StudioProjects/getx/build/windows/runner/CMakeFiles/INSTALL.dir
+C:/Users/nsheh/StudioProjects/getx/build/windows/runner/CMakeFiles/ALL_BUILD.dir
