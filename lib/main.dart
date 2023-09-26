@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:getx/core/routes.dart';
-import 'package:getx/view/counter_screen.dart';
+// import 'package:getx/view/counter_screen.dart';
 // import 'package:getx/view/home_screen.dart';
 
 void main() {
@@ -15,14 +15,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        onGenerateRoute: AppRoutes.onGenerateRoute,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: const CounterScreen()
-        // const HomeScreen(title: '')
-        );
+      onGenerateRoute: AppRoutes.onGenerateRoute,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      initialRoute: '/',
+      // home: const CounterScreen()
+      // const HomeScreen(title: '')
+    );
   }
 }

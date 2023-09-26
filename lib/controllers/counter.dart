@@ -4,11 +4,11 @@ class CounterController extends GetxController {
   RxInt counter = 0.obs;
   void increment() {
     counter++;
-    //update();
+    update();
   }
 
   void decrement() {
     counter--;
-    //update();
+    update();
   }
 }
