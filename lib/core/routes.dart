@@ -13,7 +13,7 @@ class AppRoutes {
     switch (routeSettings.name) {
       case Routes.initialRoute:
         return GetPageRoute(
-          page: () => const HomeScreen(title: 'title'),
+          page: () => const HomeScreen(),
         );
       case Routes.testScreen:
         return GetPageRoute(

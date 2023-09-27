@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx/controllers/locale.dart';
+import 'package:getx/core/localization/local.dart';
 import 'package:getx/core/routes.dart';
 import 'package:getx/core/services/setting_services.dart';
 // import 'package:getx/view/counter_screen.dart';
@@ -16,11 +18,15 @@ Future<void> initServices() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    LocaleController controller = Get.put(LocaleController());
+
+    Get.put(LocaleController());
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      locale: controller.memoryLang(),
+      translations: Locale(),
       onGenerateRoute: AppRoutes.onGenerateRoute,
       title: 'Flutter Demo',
       theme: ThemeData(

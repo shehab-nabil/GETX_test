@@ -1,17 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx/controllers/locale.dart';
+import 'package:getx/core/strings.dart';
 
 class HomeScreen extends StatelessWidget //extends GetView<HomeController> {
 {
-  const HomeScreen({super.key, required this.title});
-  final String title;
+  const HomeScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
+    LocaleController localeController = Get.find();
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () {
+                localeController.changeLang(localeController.memoryLangCode());
+              },
+              icon: const Icon(Icons.translate))
+        ],
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(title),
+        title: Text(Strings.homePage.tr),
       ),
       body: Center(
         child: Column(
@@ -21,7 +32,7 @@ class HomeScreen extends StatelessWidget //extends GetView<HomeController> {
                 onPressed: () {
                   Get.toNamed('/testScreen');
                 },
-                child: const Text('test page')),
+                child: Text(Strings.testPage.tr)),
             const Text(
               'You have pushed the button this many times:',
             ),
