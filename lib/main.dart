@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get.dart';
 import 'package:getx/core/routes.dart';
+import 'package:getx/core/services/setting_services.dart';
 // import 'package:getx/view/counter_screen.dart';
 // import 'package:getx/view/home_screen.dart';
 
-void main() {
+void main() async {
+  await initServices();
   runApp(const MyApp());
+}
+
+Future<void> initServices() async {
+  await Get.putAsync(() => SettingServices().init());
 }
 
 class MyApp extends StatelessWidget {
