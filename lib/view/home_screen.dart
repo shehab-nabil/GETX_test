@@ -28,6 +28,15 @@ class HomeScreen extends StatelessWidget //extends GetView<HomeController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            IconButton(
+                onPressed: () {
+                  if (Get.isDarkMode) {
+                    Get.changeTheme(ThemeData.light());
+                  } else {
+                    Get.changeTheme(ThemeData.dark());
+                  }
+                },
+                icon: const Icon(Icons.color_lens)),
             MaterialButton(
                 onPressed: () {
                   Get.toNamed('/testScreen');

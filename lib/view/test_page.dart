@@ -14,7 +14,9 @@ class TestPage extends StatelessWidget {
         children: [
           MaterialButton(
             onPressed: () {
-              Get.back();
+              Get.changeTheme(ThemeData.light());
+
+              // Get.back();
             },
             child: const Text('home'),
           ),

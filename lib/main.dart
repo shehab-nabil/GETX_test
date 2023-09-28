@@ -24,15 +24,17 @@ class MyApp extends StatelessWidget {
 
     Get.put(LocaleController());
     return GetMaterialApp(
+      theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       locale: controller.memoryLang(),
       translations: Locale(),
       onGenerateRoute: AppRoutes.onGenerateRoute,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      // themeMode: ThemeMode.dark,
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      //   useMaterial3: true,
+      // ),
       initialRoute: '/',
       // home: const CounterScreen()
       // const HomeScreen(title: '')
