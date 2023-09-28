@@ -10,12 +10,52 @@ class TestPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(Strings.testPage.tr)),
-      body: Center(
-        child: MaterialButton(
+      body: Column(
+        children: [
+          MaterialButton(
             onPressed: () {
               Get.back();
             },
-            child: const Text('home')),
+            child: const Text('home'),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          MaterialButton(
+            onPressed: () {
+              Get.defaultDialog(textCancel: 'cancel');
+            },
+            child: const Text('show dialog'),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          MaterialButton(
+            onPressed: () {
+              Get.snackbar('title', 'message',
+                  snackPosition: SnackPosition.BOTTOM);
+            },
+            child: const Text('show snackbar'),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          MaterialButton(
+            onPressed: () {
+              Get.bottomSheet(
+                Container(
+                  width: double.infinity,
+                  height: 50,
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                  child: const Text('data'),
+                ),
+                backgroundColor: Colors.red,
+              );
+            },
+            child: const Text('show bottom sheet'),
+          ),
+        ],
       ),
     );
   }
